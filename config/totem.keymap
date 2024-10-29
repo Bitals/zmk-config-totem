@@ -11,6 +11,7 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
@@ -33,13 +34,18 @@
         compatible = "zmk,combos";
 
         qwerty {
-            bindings = <&sl 7>;
+            bindings = <&tog 7>;
             key-positions = <33 36>;
         };
 
         game {
-            bindings = <&sl 8>;
+            bindings = <&tog 8>;
             key-positions = <5 4>;
+        };
+
+        manage {
+            bindings = <&tog 9>;
+            key-positions = <17 12>;
         };
     };
 
@@ -178,6 +184,17 @@
 &none  &kp LEFT_CONTROL  &kp Z  &kp X       &kp C  &kp G        &kp N      &kp M          &kp COMMA   &kp PERIOD  &kp FSLH       &none
                                 &kp ESCAPE  &none  &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp DELETE
             >;
+        };
+
+        manage_layer {
+            bindings = <
+       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &bt BT_CLR      &none  &none  &none  &none
+       &none          &none          &none          &none          &none            &none           &none  &none  &none  &none
+&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &bt BT_CLR_ALL  &none  &none  &none  &none  &none
+                                     &none          &none          &none            &none           &none  &none
+            >;
+
+            label = "MNG";
         };
     };
 };
