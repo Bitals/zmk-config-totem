@@ -44,7 +44,7 @@
         };
 
         manage {
-            bindings = <&tog 9>;
+            bindings = <&mo 9>;
             key-positions = <17 12>;
         };
     };
