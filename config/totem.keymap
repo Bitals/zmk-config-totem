@@ -36,16 +36,19 @@
         qwerty {
             bindings = <&tog 7>;
             key-positions = <33 36>;
+            layers = <0 7>;
         };
 
         game {
             bindings = <&tog 8>;
             key-positions = <5 4>;
+            layers = <0 8>;
         };
 
         manage {
             bindings = <&mo 9>;
             key-positions = <17 12>;
+            layers = <0 9>;
         };
     };
 
