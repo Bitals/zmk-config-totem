@@ -47,7 +47,7 @@
 
         manage {
             bindings = <&mo 9>;
-            key-positions = <17 12>;
+            key-positions = <37 32>;
             layers = <0 9>;
         };
     };
@@ -108,10 +108,10 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-        &none         &none          &none      &none           &none     &none      &kp LEFT_BRACE  &kp RIGHT_BRACE  &none         &none
-        &kp LEFT_GUI  &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &none     &none      &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW
-&trans  &none         &kp RIGHT_ALT  &none      &none           &none     &none      &kp HOME        &kp PAGE_DOWN    &kp PAGE_UP   &kp END          &trans
-                                     &none      &none           &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK
+        &none         &none          &none      &none           &none     &none         &kp LEFT_BRACE  &kp RIGHT_BRACE  &none         &none
+        &kp LEFT_GUI  &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &none     &kp CAPSLOCK  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW
+&trans  &none         &kp RIGHT_ALT  &none      &none           &none     &none         &kp HOME        &kp PAGE_DOWN    &kp PAGE_UP   &kp END          &trans
+                                     &none      &none           &trans    &mkp LCLK     &mkp RCLK       &mkp MCLK
             >;
         };
 
